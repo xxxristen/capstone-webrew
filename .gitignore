@@ -1,0 +1,14 @@
+/.idea
+src/main/resources/static/node_modules
+target/
+src/main/resources/static/package-lock.json
+src/main/resources/static/package.json
+src/main/resources/static/img/mailing-list.png
+src/main/resources/static/js/helper.js
+SQL statements
+.vscode/
+colors-pyscho.png
+src/main/resources/static/contact-us.html
+WeBrew-presentation-deck.pptx
+src/main/resources/static/pure-html-backup
+e.tx.txt
