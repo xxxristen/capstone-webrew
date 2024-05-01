@@ -14,12 +14,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     apiContainer.classList.add("alert", "alert-danger", "w-50", "translate-middle-x", "start-50", "mt-3");
                     apiContainer.setAttribute("role", "alert");
                     apiContainer.innerText = "Product id does not exist.";
+                    document.title="Coz WeBrew - Product not found";
                     throw new Error("Fetching of data failed.");
                 }
                 return response.json();
             })
             .then(data => {
                 // To start tabulating the product details into the page if the fetch api is successfully responded
+                document.title="Coz WeBrew - "+data.name;
                 const prodContainer = document.getElementById('prodContainer');
                 prodContainer.classList.add("container");
                 const prodButtonsContainer = document.createElement('div');
@@ -123,7 +125,8 @@ document.addEventListener('DOMContentLoaded', function () {
     else {
         apiContainer.classList.add("alert", "alert-danger", "w-50", "translate-middle-x", "start-50", "mt-3");
         apiContainer.setAttribute("role", "alert");
-        apiContainer.innerText = "No id indicated in the URL.";
+        apiContainer.innerText = "No ID indicated in the URL.";
+        document.title="Coz WeBrew - No ID";
     }
 });
 
