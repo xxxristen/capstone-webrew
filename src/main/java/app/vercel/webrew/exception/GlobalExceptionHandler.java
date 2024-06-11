@@ -43,7 +43,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
                 .build();
     }
 
-    // Handle EmptyTaskListException - empty product list
+    // Handle EmptyProductListException - empty product list
     @ExceptionHandler(EmptyProductListException.class)
     protected ResponseEntity<Object> handleHttpMessageNotReadable(EmptyProductListException em) {
         String errorResponse = em.getMessage();

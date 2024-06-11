@@ -33,11 +33,7 @@ public class ProductServiceController {
         } else {
             productList = productService.getProductsByType(type);
         }
-        if (productList.isEmpty()) {
-            throw new EmptyProductListException("No product available.");
-        } else {
-            return new ResponseEntity<>(productList, HttpStatus.OK);
-        }
+        return new ResponseEntity<>(productList, HttpStatus.OK);
     }
 
     // GET Mapping for retrieving a specific product by ID:

@@ -11,13 +11,14 @@ class ProductController {
         const unorderedList = document.getElementById("showList");
         // If no product
         if (!data.length) {
-            let listProduct = document.createElement("div")
-            listProduct.innerHTML = `<span>There are no products at the moment.</span>`
-            listProduct.style.alignItems = "center"
-            listProduct.style.fontSize = "x-large"
-            listProduct.style.fontStyle = "italic"
-            listProduct.style.listStyle = "none"
-            unorderedList.appendChild(listProduct)
+           unorderedList.classList.add("alert", "alert-danger", "w-50", "translate-middle-x", "start-50", "mt-3");
+            unorderedList.setAttribute("role", "alert");
+            unorderedList.innerHTML = `<span>There are no products at the moment.</span>`
+//            listProduct.style.alignItems = "center"
+//            listProduct.style.fontSize = "x-large"
+//            listProduct.style.fontStyle = "italic"
+//            listProduct.style.listStyle = "none"
+//            unorderedList.appendChild(listProduct)
             return
         }
 
@@ -159,6 +160,7 @@ class ProductController {
         productsCount.classList.add("fw-semibold");
         productsCount.innerText=`${dataSet.length} items`;
     }
+    
 
     // Method to select the inputs and check if they are empty. Used in create / update product pages
     getDOMElements() {
