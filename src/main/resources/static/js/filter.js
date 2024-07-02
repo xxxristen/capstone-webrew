@@ -102,6 +102,8 @@ teaCheckBox.addEventListener('change', () => {
         }
     })
 })
+
+// Checking the respective checkboxes on load
 document.addEventListener('DOMContentLoaded', function () {
     const url = document.location.search;
     let urlParams = new URLSearchParams(url);

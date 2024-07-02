@@ -7,11 +7,10 @@ let urlParams = new URLSearchParams(url);
 let type = urlParams.get("type");
 // console.log("Type is:" + type); // For debugging
 
-// Fetch data from API
-async function fetchData(type) {
-//    if (type === null) {
+// Fetch data from APIq
+async function fetchData(type='') {
+let response;
         try {
-        let response;
         if (type === null) {
             response = await fetch("/api/products");
         }
